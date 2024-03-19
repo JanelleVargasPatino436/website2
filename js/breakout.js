@@ -3,7 +3,7 @@ rules = document.getElementById('rules')
 closeBtn = document.getElementById('close-btn')
 
 
-
+// Rules open and close event handlers
 rulesBtn.addEventListener('click', () => {
     rules.classList.add('show')
 })
