@@ -14,6 +14,11 @@ ball = {
     dy: -4;
 }
 
+// Draw ball on canvas
+function drawBall() {
+    
+}
+
 
 
 
