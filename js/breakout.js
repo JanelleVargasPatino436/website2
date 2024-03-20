@@ -80,7 +80,11 @@ function drawScore() {
 function drawBricks() {
     bricks.forEach(column => {
         column.forEach(brick => {
-            
+            ctx.beginPath()
+            ctx.rect(brick.x, brick.y, brick.w, brick.h)
+            ctx.fillStyle = '#0095dd'
+            ctx.fill
+            ctx.closePath()
         })
     })
 }
