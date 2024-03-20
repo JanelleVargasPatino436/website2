@@ -39,6 +39,12 @@ brickInfo = {
     visible: true
 }
 
+// Create Bricks
+bricks = []
+for (let i = 0; i < brickRowCount; i++) {
+    
+}
+
 
 // Draw ball on canvas
 function drawBall() {
@@ -64,6 +70,7 @@ function drawScore() {
     ctx.font ='20px Arial'
     ctx.fillText(`Score: ${score}`, canvas.width-100, 30)
 }
+
 
 // Draw everything
 function draw() {
