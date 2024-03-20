@@ -83,7 +83,7 @@ function drawBricks() {
             ctx.beginPath()
             ctx.rect(brick.x, brick.y, brick.w, brick.h)
             ctx.fillStyle = '#0095dd'
-            ctx.fill
+            ctx.fill()
             ctx.closePath()
         })
     })
@@ -95,6 +95,7 @@ function draw() {
     drawPaddle()
     drawBall()
     drawScore()
+    drawBricks()
 }
 
 draw()
