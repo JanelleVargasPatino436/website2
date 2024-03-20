@@ -90,6 +90,8 @@ function drawBricks() {
 }
 
 
+
+
 // Draw everything
 function draw() {
     drawPaddle()
