@@ -177,6 +177,7 @@ function moveBall() {
         column.forEach(brick => {
             if (brick.visible) {
                 if (
+                    ball.x - ball.size > brick.x
                     ball.y - ball.size < brick.y + brick.h //bottom
             )
             ball.dy = -1 * ball.dy
