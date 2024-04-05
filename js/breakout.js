@@ -15,8 +15,8 @@ ball = {
     y: canvas.height / 2,
     size: 10,
     speed: 4,
-    dx: 15,
-    dy: -15,
+    dx: 8,
+    dy: -8,
 }
 
 // Create Paddle Properties
