@@ -1,7 +1,7 @@
 
 body {
-    background-color: #34495e
-    color: #ffffff
+    background-color: #34495e;
+    color: #ffffff;
 }
 
 .figure-container {
@@ -10,3 +10,8 @@ body {
     stroke-width: 4px;
     stroke-linecap: round;
 }
+
+figure-part {
+    display: none;
+}
+
