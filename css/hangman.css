@@ -34,7 +34,7 @@ h1 {
     stroke-linecap: round;
 }
 
-figure-part {
+.figure-part {
     display: none;
 }
 
