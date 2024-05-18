@@ -98,6 +98,7 @@ window.addEventListener('keydown', e => {
 
 // Restart game and play again
 playAgainBtn.addEventListener('click', () => {
+  console.log('Play again button clicked');
   correctLetters.length = 0
   wrongLetters.length = 0
 
