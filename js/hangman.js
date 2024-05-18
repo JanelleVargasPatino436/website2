@@ -31,6 +31,7 @@ const innerWord = wordEl.innerText.replace(/\n/g, '')
 if (innerWord == selectedWord) {
   finalMessage.innerText = 'Congratulations! You won!'
   popup.style.display = 'flex'
+  popup.style.display = 'none'
 }
 }
 
