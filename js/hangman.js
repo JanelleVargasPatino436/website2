@@ -12,37 +12,36 @@ let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
 
 const correctLetters = []
-const wrongLetters =[]
+const wrongLetters = []
 
 //Show hidden word
 function displayWord() {
-wordEl.innerHTML = `
-  ${selectedWord
-    .split('')
-    .map(letter => `
-      <span class="letter">
-        ${correctLetters.includes(letter) ? letter : ''}
-      </span>
-    ` ).join('')
-  }
-`
+  wordEl.innerHTML = `
+    ${selectedWord
+      .split('')
+      .map(letter => `
+        <span class="letter">
+          ${correctLetters.includes(letter) ? letter : ''}
+        </span>
+      ` ).join('')
+    }
+  `
 const innerWord = wordEl.innerText.replace(/\n/g, '')
 
-if (innerWord == selectedWord) {
-  finalMessage.innerText = 'Congratulations! You won!'
-  popup.style.display = 'flex'
-  popup.style.display = 'none'
-}
+  if (innerWord == selectedWord) {
+    finalMessage.innerText = 'Congratulations! You won!'
+    popup.style.display = 'flex'
+  }
 }
 
 // Update the wrong letters
 function updateWrongLettersEl() {
-  // Display wrong letters
+  //Display wrong letters
   wrongLettersEl.innerHTML = `
     ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
     ${wrongLetters.map(letter => `<span>${letter}</span>`)}
   `
-// Display parts
+//Display parts
   figureParts.forEach((part, index) => {
     const errors = wrongLetters.length
 
@@ -53,7 +52,7 @@ function updateWrongLettersEl() {
     }
   })
 
-// Check if lost 
+//Check if lost
   if (wrongLetters.length == figureParts.length) {
     finalMessage.innerText = 'Unfortunately you lost!'
     popup.style.display = 'flex'
@@ -61,7 +60,7 @@ function updateWrongLettersEl() {
   
 }
 
-// Show Notification
+//Show Notification
 function showNotification() {
   notification.classList.add('show')
 
@@ -71,47 +70,47 @@ function showNotification() {
 }
 
 
-// Keydown letter press
+//Keydown letter press
 window.addEventListener('keydown', e => {
 
-  if (e.keyCode >= 65 && e.keyCode <= 99) {
+  if (e.keyCode >= 65 && e.keyCode <= 90) {
     const letter = e.key
 
     if (selectedWord.includes(letter)) {
-      if ( !correctLetters.includes(letter)) {
+      if( !correctLetters.includes(letter))
         correctLetters.push(letter)
 
-        displayWord()
-      } else {
-        showNotification()
-      }
+      displayWord()
     } else {
-      if (!wrongLetters.includes(letter)) {
-        wrongLetters.push(letter)
+      showNotification()
+    }
+  } else {
+    if (!wrongLetters.includes(letter)) {
+      wrongLetters.push(letter)
 
-        updateWrongLettersEl()
-      } else {
-        showNotification()
-      }
+      updateWrongLettersEl()
+    } else {
+      showNotification()
     }
   }
+}
 })
 
-// Restart game and play again
+//Restart game and play again
 playAgainBtn.addEventListener('click', () => {
   correctLetters.length = 0
-  wrongLetters.length = 0
+  wrongLetters.length = 0 
 
 selectedIndex = Math.floor(word.length * Math.random())
 selectedWord = word[selectedIndex]
 
   displayWord()
 
-updateWrongLettersEl()
+  updateWrongLettersEl()
 
   popup.style.display = 'none'
   
-})
+)}
 
 
 displayWord()
