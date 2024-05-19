@@ -107,7 +107,7 @@ selectedWord = word[selectedIndex]
 
   displayWord()
 
-updateWrongLetterEl()
+updateWrongLettersEl()
 
   popup.style.display = 'none'
   
