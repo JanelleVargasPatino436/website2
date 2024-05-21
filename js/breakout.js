@@ -161,6 +161,10 @@ function moveBall() {
         score = 0
     }
 
+    context.font = "20px sans-serif";
+    contect.fillText("Game Oover: Press 'Space to Restart", 80, 400);
+    gameOver = true;
+
     // wall collision (left)
     if (ball.x + ball.size < 0) {
         ball.dx = -1 * ball.dx
