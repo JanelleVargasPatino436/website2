@@ -166,10 +166,6 @@ function moveBall() {
         ball.dx = -1 * ball.dx
     }
 
-    context.font = "20px sans-serif";
-    context.fillText("Game Over: Press 'Space to Restart", 80, 400);
-    gameOver = true;
-
 
 // paddle collision
     if (
