@@ -167,7 +167,7 @@ function moveBall() {
     }
 
     context.font = "20px sans-serif";
-    context.fillText("Game Oover: Press 'Space to Restart", 80, 400);
+    context.fillText("Game Over: Press 'Space to Restart", 80, 400);
     gameOver = true;
 
 
