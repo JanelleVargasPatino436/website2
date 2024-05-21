@@ -166,7 +166,6 @@ function moveBall() {
         ball.dx = -1 * ball.dx
     }
 
-
 // paddle collision
     if (
         ball.x - ball.size > paddle.x &&
